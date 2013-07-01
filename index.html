@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+    <meta charset="utf-8">
+
+    <title>AUX Form Challenge</title>
+
+    <body>
+        <form>
+            <fieldset>
+                <legend>First, name your portfolio</legend>
+                    <label for="portfolio-title">Portfolio title</label>
+                    <input id="portfolio-title" name="portfolio-title" type="text" placeholder="Name your portfolio" tabindex="1" required autofocus/>
+
+                    <label for="portfolio-url">Portfolio address</label>
+                    <input id="portfolio-url" name="portfolio-url" type="text" placeholder="What you like your URL to be?" tabindex="2" required/>
+            </fieldset>
+            <fieldset>
+                <legend>Now, enter your account details</legend>
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Please enter your full name" tabindex="3" required/>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="example@domain.com" tabindex="4" required />
+                    <label class="disclaimer" for="disclaimer">NOTE: We'll never share your email, promise.</labe/>
+
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="text" placeholder="Please choose a password" tabindex="5" required />
+            </fieldset>
+            <fieldset>
+                <legend>Finally, enter your payment information</legend>
+                    <label for="card-number">Card Number</label>
+                        <a id="paypal" href="" target="blank">Use PayPal</a>
+                    <input id="cardnumber" name="cardnumber" type="number" placeholder="Please enter your credit card number" tabindex="6" autocomplete="off" required />
+                    <input id="amex" type="radio" name="cardtype" />
+                    <input id="visa" type="radio" name="cardtype" />
+                    <input id="discover" type="radio" name="cardtype" />
+                    <input id="mastercard" type="radio" name="cardtype" />
+
+                    <label for="security">Security code</label>
+                    <input id="security" name="security" type="number" tabindex="7" autocomplete="off" required />
+
+                    <label for="expiration">Expiration date </label>
+                    <input id="month" name="month" type="month" tabindex="8" required />
+
+                    <button type="submit" role="button">Create your portfolio</button>
+
+            </fieldset>
+        </form>
+    </body>
+
+</html>
