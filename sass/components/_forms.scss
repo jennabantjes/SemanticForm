@@ -1,0 +1,33 @@
+legend {
+    color: $navy;
+    font-family: $serif;
+    font-size: 1.2em;
+    letter-spacing: -1px;
+    padding: 0.5em 0;
+}
+
+label {
+    color: $navy;
+    font-family: $sans-serif;
+    font-size: 0.7em;
+
+    #disclaimer {
+        margin-bottom: 1.25em;
+        width: 100%;
+    }
+}
+
+form {
+    background-color: white;
+    margin: auto;
+    padding: 2em;
+    width: 50%;
+
+    fieldset {
+        background-color: $light-grey;
+        border-radius: 0.25em;
+        margin-bottom: 1.5em;
+        padding: 2em;
+    }
+}
+
