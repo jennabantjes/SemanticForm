@@ -1,3 +1,18 @@
+form {
+    background-color: white;
+    margin: auto;
+    padding: 2em;
+    position: relative;
+    width: 100%;
+
+    fieldset {
+        background-color: $light-grey;
+        border-radius: 0.25em;
+        margin-bottom: 1.5em;
+        padding: 2em;
+    }
+}
+
 legend {
     color: $navy;
     font-family: $serif;
@@ -6,28 +21,43 @@ legend {
     padding: 0.5em 0;
 }
 
+span.number {
+    background-color: $medium-blue;
+    border: 0.25em solid white;
+    border-radius: 1em;
+    color: white;
+    left: -15px;
+    padding: .25em 0.5em;
+    position: absolute;
+}
+
 label {
     color: $navy;
+    display: block;
     font-family: $sans-serif;
     font-size: 0.7em;
 
-    #disclaimer {
+    &#disclaimer {
+        color: $medium-grey;
         margin-bottom: 1.25em;
         width: 100%;
     }
+
+    &#show-password {
+        display: inline-block;
+    }
 }
 
-form {
-    background-color: white;
-    margin: auto;
-    padding: 2em;
-    width: 50%;
-
-    fieldset {
-        background-color: $light-grey;
-        border-radius: 0.25em;
-        margin-bottom: 1.5em;
-        padding: 2em;
-    }
+button {
+    @include linear-gradient(lighten($green, 10), $green);
+    background-color: $green;
+    border: 1px solid $green;
+    border-radius: 0.25em;
+    color: white;
+    font-family: $serif;
+    font-size: 1em;
+    height: 2em;
+    padding: 0.25em;
+    vertical-align: center;
 }
 

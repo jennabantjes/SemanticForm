@@ -2,35 +2,44 @@
 layout: default
 ---
 
+    <section class="sign-up">
+        <header>
+            <h1>Sign up for Whoo!</h1>
+            <h2>50 projects, 500 images, 10 videos, domain binding, and technical suport.</h2>
+        </header>
+
         <form>
+            <span class="number">1</span>
             <legend>First, name your portfolio</legend>
                 <fieldset>
                     <label for="portfolio-title">Portfolio title</label>
-                    <input id="portfolio-title" name="portfolio-title" type="text" placeholder="Name your portfolio" tabindex="1" required autofocus/>
+                    <input id="portfolio-title" name="portfolio-title" type="text" tabindex="1" required autofocus/>
 
                     <label for="portfolio-url">Portfolio address</label>
-                    <input id="portfolio-url" name="portfolio-url" type="text" placeholder="What you like your URL to be?" tabindex="2" required/>
+                    <input id="portfolio-url" name="portfolio-url" type="text" tabindex="2" required/>
                 </fieldset>
+            <span class="number">2</span>
             <legend>Now, enter your account details</legend>
                 <fieldset>
                     <label for="name">Name</label>
-                    <input id="name" name="name" type="text" placeholder="Please enter your full name" tabindex="3" required/>
+                    <input id="name" name="name" type="text" tabindex="3" required/>
 
                     <label for="email">Email</label>
-                    <input id="email" name="email" type="email" placeholder="example@domain.com" tabindex="4" required />
+                    <input id="email" name="email" type="email" tabindex="4" required />
                     <label id="disclaimer" for="disclaimer">NOTE: We'll never share your email, promise.</label>
 
                     <label for="password">Password</label>
-                    <input id="password" name="password" type="text" placeholder="Please choose a password" tabindex="5" required />
+                    <input id="password" name="password" type="text" tabindex="5" required />
 
-                    <input type="checkbox" name="checkbox" value="value" />
-                    <label for="showpassword">Show Password</label>
+                    <input type="checkbox" name="checkbox" value="value" id="checkbox" />
+                    <label for="showpassword" id="show-password">Show Password</label>
                 </fieldset>
+            <span class="number">3</span>
             <legend>Finally, enter your payment information</legend>
             <a id="paypal" href="" target="blank">Use PayPal</a>
                 <fieldset>
                     <label for="card-number">Card Number</label>
-                    <input id="cardnumber" name="cardnumber" type="number" placeholder="Please enter your credit card number" tabindex="6" autocomplete="off" required />
+                    <input id="cardnumber" name="cardnumber" type="number" tabindex="6" autocomplete="off" required />
                     <input id="amex" type="radio" name="cardtype" />
                     <input id="visa" type="radio" name="cardtype" />
                     <input id="discover" type="radio" name="cardtype" />
@@ -41,7 +50,8 @@ layout: default
 
                     <label for="expiration">Expiration date </label>
                     <input id="month" name="month" type="month" tabindex="8" required />
-
-                    <button type="submit" role="button">Create your portfolio</button>
                 </fieldset>
+
+                <button type="submit" role="button">Create your portfolio</button>
         </form>
+    </section>

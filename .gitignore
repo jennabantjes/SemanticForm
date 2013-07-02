@@ -1,4 +1,5 @@
 .sass-cache/*
+sass/.sass-cache/*
 *.git
 _site/
 *.css
