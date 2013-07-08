@@ -11,19 +11,59 @@ input {
         display: inline-block;
         height: 1.1em;
     }
+
+    &#security:after {
+        background: url('sprite.png') no-repeat 0 -374px;
+    }
 }
 
-input[type="text"], input[type="email"] {
+input[type="text"], input[type="email"], input[type="password"] {
     width: 100%;
 }
 
 input[type="radio"] {
-    @include linear-gradient(lighten($light-grey, 5), darken($light-grey, 5));
-    background-color: $light-grey;
+   //@include linear-gradient(lighten($light-grey, 5), darken($light-grey, 5));
+    //background-color: $light-grey;
+    background-image: url('sprite.png');
     border: $default-border-style;
-    border-radius: 0.3em;
-    height: 2.5em;
+    //border-radius: 0.3em;
+    height: 3em;
+    opacity: 1;
     vertical-align: middle;
-    width: 3.5em;
+    width: 4.25em;
     -webkit-appearance: none;
+
+    &#amex {
+        background-position: 0 -122px;
+    }
+
+    &#visa {
+        background-position: -48px -122px;
+    }
+
+    &#discover {
+        background-position: -96px -122px;
+    }
+
+    &#mastercard {
+        background-position: -144px -122px;
+    }
+}
+
+input[type="number"] {
+    &:valid {
+        color: green;
+        &::before {
+            content: 'yes';
+            color: green;
+        }
+    }
+
+    &:invalid {
+        color: red;
+    }
+}
+
+.inactive {
+    opacity: .5;
 }

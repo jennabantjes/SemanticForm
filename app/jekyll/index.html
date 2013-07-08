@@ -10,42 +10,50 @@ layout: default
 
 
         <form>
-            <span class="number">1</span>
             <legend>First, name your portfolio</legend>
                 <fieldset>
                     <label for="portfolio-title">Portfolio title</label>
                     <input id="portfolio-title" name="portfolio-title" type="text" required autofocus/>
+                    <br>
 
                     <label for="portfolio-url">Portfolio address</label>
                     <input id="portfolio-url" name="portfolio-url" type="text" required/>
                 </fieldset>
-            <span class="number">2</span>
             <legend>Now, enter your account details</legend>
                 <fieldset>
                     <label for="name">Name</label>
                     <input id="name" name="name" type="text" required/>
+                    <br>
 
                     <label for="email">Email</label>
                     <input id="email" name="email" type="email" required />
                     <label id="disclaimer" for="disclaimer">NOTE: We'll never share your email, promise.</label>
+                    <br>
 
                     <label for="password">Password</label>
-                    <input id="password" name="password" type="text"required />
+                    <input id="password" name="password" type="password"required />
 
                     <input type="checkbox" name="checkbox" value="value" id="checkbox" />
                     <label for="showpassword" id="show-password">Show Password</label>
                 </fieldset>
-            <span class="number">3</span>
             <legend>Finally, enter your payment information</legend>
             <a id="paypal" href="" target="blank">Use PayPal</a>
                 <fieldset>
                     <label for="card-number">Card Number</label>
-                    <input id="cardnumber" name="cardnumber" type="number" autocomplete="off" required />
+                    <input id="cardnumber" name="cardnumber" type="number" autocomplete="off" pattern="[0-9]{13,16}"  required />
 
-                    <input id="amex" class="cardtype" type="radio" name="cardtype" />
-                    <input id="visa" class="cardtype" type="radio" name="cardtype" />
-                    <input id="discover" class="cardtype" type="radio" name="cardtype" />
-                    <input id="mastercard" class="cardtype" type="radio" name="cardtype" />
+                    <label for="amex" class="cardtype">American Express</label>
+                    <input id="amex" type="radio" name="cardtype" />
+
+                    <label for="visa" class="cardtype">Visa</label>
+                    <input id="visa" type="radio" name="cardtype" />
+
+                    <label for="discover" class="cardtype">Discover</label>
+                    <input id="discover" type="radio" name="cardtype" />
+
+                    <label for="mastercard" class="cardtype">MasterCard</label>
+                    <input id="mastercard" type="radio" name="cardtype" />
+                    <br>
 
                     <label for="security">Security code</label>
                     <input id="security" name="security" type="number" autocomplete="off" required />

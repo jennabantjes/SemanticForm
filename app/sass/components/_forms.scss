@@ -1,5 +1,6 @@
 form {
     background-color: white;
+    counter-reset: number;
     margin: auto;
     padding: 2em;
     position: relative;
@@ -18,6 +19,18 @@ form {
         font-size: 1.2em;
         letter-spacing: -1px;
         padding: 0.5em 0;
+
+        &:before {
+            background-color: $medium-blue;
+            border: 0.25em solid white;
+            border-radius: 1em;
+            color: white;
+            counter-increment:number;
+            content: counter(number);
+            left: -15px;
+            padding: .25em 0.5em;
+            position: absolute;
+        }
     }
 
     label {
@@ -28,24 +41,17 @@ form {
 
         &#disclaimer {
             color: $medium-grey;
-            margin-bottom: 1.25em;
             width: 100%;
         }
 
         &#show-password {
             display: inline-block;
         }
-    }
-}
 
-span.number {
-    background-color: $medium-blue;
-    border: 0.25em solid white;
-    border-radius: 1em;
-    color: white;
-    left: -15px;
-    padding: .25em 0.5em;
-    position: absolute;
+        &.cardtype {
+            display: none;
+        }
+    }
 }
 
 button {
@@ -60,12 +66,3 @@ button {
     padding: 0.25em;
     vertical-align: center;
 }
-
-.active {
-    opacity: 1;
-}
-
-.inactive {
-    opacity: 0.5;
-}
-

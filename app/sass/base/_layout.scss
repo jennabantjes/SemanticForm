@@ -1,20 +1,11 @@
-body {
-    background-color: $light-blue;
-}
-
 section {
     margin: auto;
+    margin-bottom: 1em;
     min-width: 500px;
     width: 50%;
 }
 
 header {
-    @include linear-gradient(lighten($dark-blue, 10), $dark-blue);
-    background-color: $navy;
-    border: 1px solid $dark-blue;
-    border: 1px solid $light-blue inset;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
     margin: auto;
     padding: 2em;
     width: 100%;

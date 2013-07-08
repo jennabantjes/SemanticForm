@@ -37,23 +37,19 @@
   switch (type)
   {
     case "mastercard":
-      $('.cardtype').addClass('inactive');
-      $('#mastercard').addClass('active');
+      $('#visa', '#amex', 'discover').addClass('inactive');
       break;
 
     case "visa":
-      $('.cardtype').addClass('inactive');
-      $('#visa').addClass('active');
+      $('#mastercard', '#amex', 'discover').addClass('inactive');
       break;
 
     case "amex":
-      $('.cardtype').addClass('inactive');
-      $('#amex').addClass('active');
+      $('#visa', '#mastercard', 'discover').addClass('inactive');
       break;
 
     case "discover":
-      $('.cardtype').addClass('inactive');
-      $('#discover').addClass('active');
+      $('#visa', '#amex', 'mastercard').addClass('inactive');
       break;
 
     default:
@@ -90,4 +86,21 @@ document.addEventListener("DOMContentLoaded", function(){
   var textbox = document.getElementById("cardnumber");
   textbox.addEventListener("keyup", handleEvent, false);
   textbox.addEventListener("blur", handleEvent, false);
+
+  function checkLuhn(input)
+  {
+    var sum = 0;
+    var numdigits = input.length;
+    var parity = numdigits % 2;
+    for(var i=0; i < numdigits; i++) {
+      var digit = parseInt(input.charAt(i))
+      if(i % 2 == parity) digit *= 2;
+      if(digit > 9) digit -= 9;
+      sum += digit;
+    }
+    return (sum % 10) == 0;
+  }
+
+
+
 }, false);
