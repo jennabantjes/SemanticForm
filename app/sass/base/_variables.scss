@@ -2,6 +2,9 @@
 $serif: 'Antic Slab', serif;
 $sans-serif: 'Lucida Grande', Arial, Verdana, sans-serif;
 
+$title-font: $serif;
+$body-font: $sans-serif;
+
 // Colors
 $light-blue: #b3e3ff;
 $medium-blue: #4090CD;
@@ -13,3 +16,6 @@ $light-grey: #F0F3F3;
 $medium-grey: #7B7B83;
 
 $green: #6A8D1A;
+
+// Borders
+$default-border-style: 1px solid darken($light-grey, 20);

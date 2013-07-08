@@ -1,0 +1,29 @@
+input {
+    border-radius: 0.5em;
+    height: 2.5em;
+    margin: 0.5em 0 1.25em 0;
+
+    &#email {
+        margin-bottom: 0.5em;
+    }
+
+    &#checkbox {
+        display: inline-block;
+        height: 1.1em;
+    }
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+}
+
+input[type="radio"] {
+    @include linear-gradient(lighten($light-grey, 5), darken($light-grey, 5));
+    background-color: $light-grey;
+    border: $default-border-style;
+    border-radius: 0.3em;
+    height: 2.5em;
+    vertical-align: middle;
+    width: 3.5em;
+    -webkit-appearance: none;
+}
