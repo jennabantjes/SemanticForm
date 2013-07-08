@@ -51,6 +51,8 @@ input[type="radio"] {
 }
 
 input[type="number"] {
+    width: 50%;
+
     &:valid {
         color: green;
         &::before {
