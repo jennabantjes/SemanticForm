@@ -38,19 +38,6 @@ form {
         display: block;
         font-family: $sans-serif;
         font-size: 0.7em;
-
-        &#disclaimer {
-            color: $medium-grey;
-            width: 100%;
-        }
-
-        &#show-password {
-            display: inline-block;
-        }
-
-        &.cardtype {
-            display: none;
-        }
     }
 }
 
@@ -65,4 +52,17 @@ button {
     height: 2em;
     padding: 0.25em;
     vertical-align: center;
+}
+
+.disclaimer {
+    color: $medium-grey;
+    width: 100%;
+}
+
+.show-password {
+    display: inline-block;
+}
+
+.cardtype {
+    display: none;
 }
