@@ -1,4 +1,3 @@
-
   function getCreditCardType(accountNumber)
   {
 
@@ -81,26 +80,25 @@ function handleEvent(event)
   }
 }
 
-// or window.onload
-document.addEventListener("DOMContentLoaded", function(){
-  var textbox = document.getElementById("cardnumber");
-  textbox.addEventListener("keyup", handleEvent, false);
-  textbox.addEventListener("blur", handleEvent, false);
 
-  function checkLuhn(input)
-  {
-    var sum = 0;
-    var numdigits = input.length;
-    var parity = numdigits % 2;
-    for(var i=0; i < numdigits; i++) {
-      var digit = parseInt(input.charAt(i))
-      if(i % 2 == parity) digit *= 2;
-      if(digit > 9) digit -= 9;
-      sum += digit;
+;(function($){
+
+  $('#unmask').click(function(){
+    if($('#unmask').is(':checked'))
+    {
+      $('.form').find('input:password').each(function(){
+        $("<input type='text' />").attr({name: this.name, value: this.value}).insertBefore(this);
+      }).remove();
+      console.log('i\'m checked');
     }
-    return (sum % 10) == 0;
-  }
 
+    else
+    {
+      $('.form').find('input:text').each(function(){
+        $("<input type='password' />").attr({name: this.name, value: this.value}).insertBefore(this);
+      }).remove();
+      console.log('I\'m unchecked');
+    }
+  });
 
-
-}, false);
+})(jQuery);
