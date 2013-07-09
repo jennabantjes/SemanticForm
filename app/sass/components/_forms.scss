@@ -66,3 +66,16 @@ button {
 .cardtype {
     display: none;
 }
+
+.sample-url {
+    background-color: $light-grey;
+    border-left: $default-border-style;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    color: $medium-grey;
+    font-size: 0.8em;
+    left: 383px;
+    top: 183px;
+    padding: 0.7em 2em;
+    position: absolute;
+}
