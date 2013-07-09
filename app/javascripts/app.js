@@ -1,7 +1,36 @@
-$(document).ready(function() {
+;(function($){
 
+  $('#cardnumber').blur(function(){
 
-});
+      var value = $('#cardnumber').val();
+
+      if (/^3[47]/.test(value))
+      {
+        alert('amex');
+      }
+
+      else if(/^4/.test(value))
+      {
+        alert('visa');
+      }
+
+      else if(/^5[1-5]/.test(value))
+      {
+        alert('mastercard');
+      }
+
+      else if(/^6(?:011|5)/.test(value))
+      {
+        alert('discover');
+      }
+
+      else
+      {
+        alert('we cant seem to find your card type');
+      }
+  });
+
+})(jQuery);
 
 
 ;(function($){
