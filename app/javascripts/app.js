@@ -4,29 +4,33 @@
 
       var value = $('#cardnumber').val();
 
-      if (/^3[47]/.test(value))
+      if (/^3[47][0-9]{13}$/.test(value))
       {
-        alert('amex');
+        $('#amex').fadeIn(100, 0.8);
+        $('#visa, #mastercard, #discover').fadeTo(300, 0.5);
       }
 
-      else if(/^4/.test(value))
+      else if(/^4[0-9]{12}(?:[0-9]{3})?$/.test(value))
       {
-        alert('visa');
+        $('#visa').fadeIn(100, 1);
+        $('#amex, #mastercard, #discover').fadeTo(300, 0.5);
       }
 
-      else if(/^5[1-5]/.test(value))
+      else if(/^5[1-5][0-9]{14}$/.test(value))
       {
-        alert('mastercard');
+        $('#mastercard').fadeIn(100, 1);
+        $('#visa, #amex, #discover').fadeTo(300, 0.5);
       }
 
-      else if(/^6(?:011|5)/.test(value))
+      else if(/^6(?:011|5[0-9]{2})[0-9]{12}$/.test(value))
       {
-        alert('discover');
+        $('#discover').fadeIn(100, 1);
+        $('#visa, #mastercard, #amex').fadeTo(300, 0.5);
       }
 
       else
       {
-        alert('we cant seem to find your card type');
+        $('#cardnumber').val('Sorry, but that number is invalid');
       }
   });
 
