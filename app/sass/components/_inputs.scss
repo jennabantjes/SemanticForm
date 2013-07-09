@@ -16,7 +16,7 @@ input {
         background: url('sprite.png') no-repeat 0 -374px;
     }
 
-    &#password {
+    &[name="password"] {
         margin-bottom: 0;
     }
 }
@@ -54,7 +54,7 @@ input[type="radio"] {
     }
 }
 
-input[type="number"] {
+input#cardnumber {
     width: 50%;
 
     &:valid {
