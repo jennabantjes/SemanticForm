@@ -3,19 +3,6 @@ input {
     height: 2.5em;
     margin: 0.5em 0 1.25em 0;
 
-    &#email {
-        margin-bottom: 0.5em;
-    }
-
-    &#checkbox {
-        display: inline-block;
-        height: 1.1em;
-    }
-
-    &#security:after {
-        background: url('sprite.png') no-repeat 0 -374px;
-    }
-
     &[name="password"] {
         margin-bottom: 0;
     }
@@ -26,50 +13,60 @@ input[type="text"], input[type="email"], input[type="password"] {
 }
 
 input[type="radio"] {
-   //@include linear-gradient(lighten($light-grey, 5), darken($light-grey, 5));
-    //background-color: $light-grey;
     background-image: url('sprite.png');
     border: $default-border-style;
-    //border-radius: 0.3em;
     height: 3em;
     opacity: 1;
     vertical-align: middle;
     width: 4.25em;
     -webkit-appearance: none;
+}
 
-    &#amex {
-        background-position: 0 -122px;
-    }
+#amex {
+    background-position: 0 -122px;
+}
 
-    &#visa {
-        background-position: -48px -122px;
-    }
+#visa {
+    background-position: -48px -122px;
+}
 
-    &#discover {
-        background-position: -96px -122px;
-    }
+#discover {
+    background-position: -96px -122px;
+}
 
-    &#mastercard {
-        background-position: -144px -122px;
+#mastercard {
+    background-position: -144px -122px;
+}
+
+.email {
+    margin-bottom: 0.5em;
+}
+
+.checkbox {
+    display: inline-block;
+    height: 1.1em;
+}
+
+.portfolio-url {
+    display: inline-block;
+    position: relative;
+
+    &:after {
+        content: "sample.com";
+        display: inline-block;
+        font-size: 24px;
+        height: 3em;
     }
 }
 
-input#cardnumber {
+#cardnumber {
     width: 50%;
 
     &:valid {
         color: green;
-        &::before {
-            content: 'yes';
-            color: green;
-        }
     }
 
     &:invalid {
         color: red;
     }
-}
-
-.inactive {
-    opacity: .5;
 }
