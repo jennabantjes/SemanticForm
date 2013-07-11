@@ -73,9 +73,35 @@ button {
     border-top-right-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
     color: $medium-grey;
+    float: right;
     font-size: 0.8em;
-    left: 383px;
-    top: 183px;
+    left: 4px;
+    bottom: 45px;
     padding: 0.7em 2em;
-    position: absolute;
+    position: relative;
 }
+
+#paypal {
+    font-size: 0.6em;
+}
+
+#security {
+    width: 20%;
+}
+
+.security-image.regular {
+    background: url('sprite.png') no-repeat 0 -374px;
+    display: inline-block;
+    height: 32px;
+    vertical-align: middle;
+    width: 62px;
+}
+
+.security-image.amex {
+    background: url('sprite.png') no-repeat  0 -331px;
+    display: inline-block;
+    height: 33px;
+    vertical-align: middle;
+    width: 70px;
+}
+

@@ -54,8 +54,12 @@ layout: default
                     </label>
                 </fieldset>
 
-            <legend>Finally, enter your payment information</legend>
-            <a id="paypal" href="" target="blank">Use PayPal</a>
+            <legend>
+                Finally, enter your payment information
+                <a id="paypal" href="" target="blank">
+                    Use PayPal
+                </a>
+            </legend>
                 <fieldset>
                     <label for="card-number" class="cardnumber-label">
                         Card Number
@@ -86,7 +90,8 @@ layout: default
                     <label for="security">
                         Security code
                     </label>
-                    <input class="security" name="security" type="number" autocomplete="off" required />
+                    <input id="security" class="security" name="security" type="text" autocomplete="off" required />
+                    <label for="security-image" class="security-image regular"></label>
 
                     <label for="expiration">
                         Expiration date
