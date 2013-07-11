@@ -39,6 +39,16 @@ form {
         font-family: $sans-serif;
         font-size: 0.7em;
     }
+
+    select {
+        @include linear-gradient(white, $light-grey);
+        border: 1px solid lighten($medium-grey, 30);
+        height: 3em;
+        margin-top: 0.5em;
+        padding-left: 0.5em;
+        width: 25%;
+        -webkit-appearance: none;
+    }
 }
 
 button {
@@ -105,3 +115,9 @@ button {
     width: 70px;
 }
 
+.lock {
+        background: url('sprite.png') no-repeat -60px -499px;
+        float: right;
+        height: 19px;
+        width: 14px;
+}

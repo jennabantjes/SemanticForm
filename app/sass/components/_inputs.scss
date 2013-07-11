@@ -50,13 +50,6 @@ input[type="radio"] {
 .portfolio-url {
     display: inline-block;
     position: relative;
-
-    &:after {
-        content: "sample.com";
-        display: inline-block;
-        font-size: 24px;
-        height: 3em;
-    }
 }
 
 #cardnumber {
@@ -69,4 +62,12 @@ input[type="radio"] {
     &:invalid {
         color: red;
     }
+}
+
+.valid {
+    color: green;
+}
+
+.invalid {
+    color: red;
 }
