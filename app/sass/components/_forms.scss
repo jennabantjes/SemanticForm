@@ -73,6 +73,12 @@ button {
     display: inline-block;
 }
 
+.no-js {
+    .show-password, .checkbox {
+        display: none;
+    }
+}
+
 .cardtype {
     display: none;
 }

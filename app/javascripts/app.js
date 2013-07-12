@@ -1,3 +1,17 @@
+Modernizr.load([
+    {
+        load: '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+        complete: function() {
+            if(!window.jquery) {
+                Modernizr.load('js/libs/jquery.js');
+            }
+        }
+    },
+    {
+        load: 'needs-jQuery.js'
+    }
+]);
+
 ;(function($){
   "use strict";
 
