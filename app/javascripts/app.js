@@ -1,18 +1,9 @@
-Modernizr.load([
-    {
-        load: '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
-        complete: function() {
-            if(!window.jquery) {
-                Modernizr.load('js/libs/jquery.js');
-            }
-        }
-    },
-    {
-        load: 'needs-jQuery.js'
-    }
-]);
+;Modernizr.load({
+  test: Modernizr.input.required,
+  nope: 'javascripts/libs/jquery.validate.js'
+});
 
-;(function($){
+(function($){
   "use strict";
 
   // Find Card Type
