@@ -108,7 +108,9 @@ form {
     background-color: #f0f3f3;
     border-radius: 0.25em;
     margin-bottom: 1.5em;
-    padding: 2em; }
+    padding: 2em 2em 1em 2em; }
+    form fieldset.expiration {
+      padding: 0; }
   form legend.title {
     color: #032339;
     font-family: "Antic Slab", serif;
@@ -130,17 +132,15 @@ form {
     display: block;
     font-family: "Lucida Grande", Arial, Verdana, sans-serif;
     font-size: 0.7em; }
+    form label.year, form label.month {
+      left: 9999px;
+      position: absolute; }
   form select {
-    background-color: white;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #f0f3f3));
-    background-image: -webkit-linear-gradient(white, #f0f3f3);
-    background-image: linear-gradient(white, #f0f3f3);
     border: 1px solid #cacacd;
-    height: 3em;
+    height: 2em;
     margin-top: 0.5em;
     padding-left: 0.5em;
-    width: 25%;
-    -webkit-appearance: none; }
+    width: 25%; }
 
 button {
   background-color: #8ab822;
@@ -155,7 +155,7 @@ button {
   font-size: 1em;
   height: 2em;
   margin-left: 33%;
-  padding: 0.25em;
+  padding: 0.25em 1em;
   vertical-align: center; }
 
 .disclaimer {

@@ -165,8 +165,8 @@
                         <legend for="expiration">
                             Expiration date
                         </legend>
-                        <fieldset>
-                            <label for="month">Month</label>
+                        <fieldset id="expiration" class="expiration">
+                            <label for="month" class="month">Month</label>
                                 <select class="month" id="month" role="select">
                                     <option value="Default" class="month">Month</option>
                                     <option value="January">01 - January</option>
@@ -183,7 +183,7 @@
                                     <option value="December">12 - Decemeber</option>
                                 </select>
 
-                            <label for="year">Year</label>
+                            <label for="year" class="year">Year</label>
                                 <select class="year" id="year" role="select">
                                     <option value="Default">Year</option>
                                     <option value="2013">2013</option>
@@ -204,11 +204,13 @@
                                     <option value="2028">2028</option>
                                 </select>
                         </fieldset>
+
+                        <span class="lock">Your information is secure.</span>
+
                     </fieldset>
 
                     <button type="submit" role="button">Create your portfolio</button>
 
-                    <span class="lock">Your information is secure.</span>
             </form>
         </section>
 
