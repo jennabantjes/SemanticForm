@@ -2,6 +2,7 @@ form {
     background-color: white;
     counter-reset: number;
     margin: auto;
+    max-width: 700px;
     padding: 2em;
     position: relative;
     width: 100%;
@@ -13,7 +14,7 @@ form {
         padding: 2em;
     }
 
-    legend {
+    legend.title {
         color: $navy;
         font-family: $serif;
         font-size: 1.2em;
@@ -67,6 +68,7 @@ button {
 
 .disclaimer {
     color: $medium-grey;
+    margin-bottom: 1em;
     width: 100%;
 }
 
@@ -80,21 +82,17 @@ button {
     }
 }
 
-.cardtype {
-    display: none;
-}
-
 .sample-url {
+    @include box-shadow(0 1px 2px rgba(0,0,0,0.2) inset, 0 -1px 0 rgba(0,0,0,0.05) inset);
     background-color: $light-grey;
-    border-left: $default-border-style;
-    border-top-right-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
+    border: none;
+    border-radius: 0 0.5em 0.5em 0;
     color: $medium-grey;
     float: right;
     font-size: 0.8em;
     left: 4px;
-    bottom: 44px;
-    padding: 0.7em 2em;
+    bottom: 42px;
+    padding: 0.6em 2em;
     position: relative;
 }
 
@@ -106,17 +104,21 @@ button {
     width: 20%;
 }
 
+.security-image {
+    text-indent: -9999px;
+}
+
 .security-image.regular {
+    @include inline-block;
     background: url('sprite.png') no-repeat 0 -374px;
-    display: inline-block;
     height: 32px;
     vertical-align: middle;
     width: 62px;
 }
 
 .security-image.amex {
+    @include inline-block;
     background: url('sprite.png') no-repeat  0 -331px;
-    display: inline-block;
     height: 33px;
     vertical-align: middle;
     width: 70px;
@@ -126,5 +128,6 @@ button {
         background: url('sprite.png') no-repeat -60px -499px;
         float: right;
         height: 19px;
+        text-indent: -9999px;
         width: 14px;
 }

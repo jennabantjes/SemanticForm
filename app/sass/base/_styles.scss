@@ -6,7 +6,6 @@ header {
     @include linear-gradient(lighten($dark-blue, 10), $dark-blue);
     border: 1px solid $dark-blue;
     border: 1px solid $light-blue inset;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
+    border-radius: 0.5em 0.5em 0 0;
     margin-top: 1em;
 }

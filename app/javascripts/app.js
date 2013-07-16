@@ -1,10 +1,10 @@
-;Modernizr.load({
-  test: Modernizr.input.required,
-  nope: 'javascripts/libs/jquery.validate.js'
-});
-
-(function($){
+;(function($){
   "use strict";
+
+  Modernizr.load({
+    test: Modernizr.input.required,
+    nope: 'javascripts/libs/jquery.validate.js'
+  });
 
   // Find Card Type
   function checkSecurityCode(){
@@ -82,8 +82,8 @@
   });
 
   // Show/Hide Password
-  $('#unmask').click(function(){
-    if($('#unmask').is(':checked'))
+  $('#checkbox').click(function(){
+    if($('#checkbox').is(':checked'))
     {
       $('.form').find('input:password').each(function(){
         $("<input type='text' />").attr({name: this.name, value: this.value}).insertBefore(this);
@@ -96,6 +96,10 @@
         $("<input type='password' />").attr({name: this.name, value: this.value}).insertBefore(this);
       }).remove();
     }
+  });
+
+  $('#checkbox').click(function(){
+
   });
 
 })(jQuery);
