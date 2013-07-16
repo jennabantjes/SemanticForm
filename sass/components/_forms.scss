@@ -5,7 +5,7 @@ form {
     max-width: 700px;
     padding: 2em;
     position: relative;
-    width: 100%;
+    width: 567px;
 
     fieldset {
         background-color: $light-grey;
@@ -91,13 +91,14 @@ button {
     float: right;
     font-size: 0.8em;
     left: 4px;
-    bottom: 42px;
     padding: 0.6em 2em;
     position: relative;
+    top: 6px;
 }
 
-#paypal {
-    font-size: 0.6em;
+.paypal {
+    @include inline-block;
+    font-size: 1.2em;
 }
 
 #security {
@@ -110,7 +111,7 @@ button {
 
 .security-image.regular {
     @include inline-block;
-    background: url('sprite.png') no-repeat 0 -374px;
+    background: url('../images/sprite.png') no-repeat 0 -374px;
     height: 32px;
     vertical-align: middle;
     width: 62px;
@@ -118,14 +119,14 @@ button {
 
 .security-image.amex {
     @include inline-block;
-    background: url('sprite.png') no-repeat  0 -331px;
+    background: url('../images/sprite.png') no-repeat  0 -331px;
     height: 33px;
     vertical-align: middle;
     width: 70px;
 }
 
 .lock {
-        background: url('sprite.png') no-repeat -60px -499px;
+        background: url('../images/sprite.png') no-repeat -60px -499px;
         float: right;
         height: 19px;
         text-indent: -9999px;

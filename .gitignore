@@ -22,25 +22,6 @@ nbproject
 *.sublime-project
 *.sublime-workspace
 
-# Grunt generated files
-node_modules/
-config.rb
-
-#CSS files since they are auto generated
-*.css
-
-# Jekyll Site Folder - Because it's already getting copied into public
-_site/
-public/
-
-# Dreamweaver added files
-_notes
-dwsync.xml
-
-# Komodo
-*.komodoproject
-.komodotools
-
 # Folders to ignore
 .hg
 .svn
@@ -48,7 +29,3 @@ dwsync.xml
 intermediate
 publish
 .idea
-
-# build script local files
-build/buildinfo.properties
-build/config/buildinfo.properties

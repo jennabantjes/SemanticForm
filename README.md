@@ -21,3 +21,6 @@
 - Use HTML 5 validation that fallsback to JS validation, which falls back to PHP validation (you don't have to build the PHP validation)
 - Make sure the form is naturally keyboard accessible
 - Use semantic HTML
+
+**To watch the sass (from root):
+$ sass --watch sass/app.scss:sass/app.css

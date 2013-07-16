@@ -28,7 +28,7 @@ input[type="radio"] {
 label.cardtype {
     @include inline-block;
     background-color: $light-grey;
-    background-image: url('sprite.png');
+    background-image: url('../images/sprite.png');
     height: 3em;
     opacity: 0.5;
     text-indent: -9999px;
@@ -70,6 +70,7 @@ label.cardtype {
 .checkbox {
     @include inline-block;
     height: 1.1em;
+    margin-top: 1em;
 }
 
 .no-js.checkbox {
@@ -78,6 +79,7 @@ label.cardtype {
 
 .portfolio-url {
     @include inline-block;
+    border-radius: 0.5em 0 0 0.5em;
     position: relative;
 }
 
