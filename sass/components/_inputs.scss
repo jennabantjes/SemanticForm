@@ -11,7 +11,10 @@ input[type="text"], input[type="email"], input[type="password"] {
 }
 
 input[type="url"] {
-    width: 73%;
+    border-radius: 0.5em 0 0 0.5em;
+    @include inline-block;
+    float: left;
+    width: 378px;
     z-index: 999;
 }
 
@@ -42,6 +45,7 @@ label.cardtype {
     }
 }
 
+// Credit Cards
 #amex-image {
     background-position: 0 -122px;
 }
@@ -58,21 +62,18 @@ label.cardtype {
     background-position: -144px -122px;
 }
 
+// Labels
 .email {
     margin-bottom: 0.5em;
 }
 
-#password {
-    z-index: 1;
+.portfolio-url {
+/*    @include inline-block;
+    border-radius: 0.5em 0 0 0.5em;
+    position: relative;*/
 }
 
-#password-reveal {
-    position: absolute;
-    top: 517px;
-    width: 436px;
-    z-index: -1;
-}
-
+// Password
 .checkbox {
     left: -9999px;
     position: absolute;
@@ -82,12 +83,12 @@ label.cardtype {
     display: none;
 }
 
-.portfolio-url {
-    @include inline-block;
-    border-radius: 0.5em 0 0 0.5em;
-    position: relative;
+.offPage {
+    position: absolute;
+    left: -9999px;
 }
 
+// Validation
 #cardnumber {
     &:valid {
         color: green;
@@ -142,9 +143,4 @@ input.valid {
 
 input.invalid {
     color: red;
-}
-
-.offPage {
-    position: absolute;
-    left: -9999px;
 }
