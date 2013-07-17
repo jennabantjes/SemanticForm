@@ -16,8 +16,14 @@ input[type="url"] {
 }
 
 input[type="radio"] {
-    left: -9999px;
-    position: absolute;
+    box-shadow: none;
+}
+
+.js {
+    input[type="radio"]{
+        left: -9999px;
+        position: absolute;
+    }
 }
 
 label.cardtype {
@@ -25,10 +31,15 @@ label.cardtype {
     background-color: $light-grey;
     background-image: url('../images/sprite.png');
     height: 3em;
-    opacity: 0.5;
     text-indent: -9999px;
     vertical-align: middle;
     width: 4.25em;
+}
+
+.js {
+    label.cardtype {
+        opacity: 0.5;
+    }
 }
 
 #amex-image {
@@ -51,15 +62,15 @@ label.cardtype {
     margin-bottom: 0.5em;
 }
 
+#password {
+    z-index: 1;
+}
+
 #password-reveal {
     position: absolute;
     top: 517px;
     width: 436px;
     z-index: -1;
-}
-
-#password {
-    z-index: 1;
 }
 
 .checkbox {
@@ -78,8 +89,6 @@ label.cardtype {
 }
 
 #cardnumber {
-    width: 50%;
-
     &:valid {
         color: green;
     }
@@ -89,11 +98,47 @@ label.cardtype {
     }
 }
 
-.valid {
+.js #cardnumber {
+    width: 50%;
+}
+
+.no-js {
+    #cardnumber {
+        width: 45%;
+    }
+}
+
+.validation.valid, .security-code.valid{
+    &:after {
+        @include inline-block;
+        background-image: url('../images/sprite.png');
+        background-position: -31px -499px;
+        background-repeat: no-repeat;
+        content: "Your card is valid";
+        height: 19px;
+        text-indent: -9999px;
+        width: 19px;
+    }
+}
+
+.validation.invalid, .security-code.invalid {
+    &:after {
+         @include inline-block;
+        background-image: url('../images/sprite.png');
+        background-position: no-repeat;
+        background-position: -2px -499px;
+        content: 'Your card is invalid';
+        height: 19px;
+        text-indent: -9999px;
+        width: 19px;
+    }
+}
+
+input.valid {
     color: green;
 }
 
-.invalid {
+input.invalid {
     color: red;
 }
 

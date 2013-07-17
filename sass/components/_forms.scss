@@ -111,10 +111,8 @@ label.show-password {
     }
 }
 
-.no-js {
-    .show-password, .checkbox {
+.no-js .show-password, .checkbox {
         display: none;
-    }
 }
 
 .sample-url {
@@ -136,6 +134,10 @@ label.show-password {
     left: 527px;
     position: absolute;
     top: 593px;
+}
+
+.no-js .paypal {
+    top:576px;
 }
 
 #security {

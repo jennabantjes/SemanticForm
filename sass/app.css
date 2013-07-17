@@ -192,7 +192,7 @@ label.show-password {
   label.show-password.unchecked:before {
     background-position: -80px 0; }
 
-.no-js .show-password, .no-js .checkbox {
+.no-js .show-password, .checkbox {
   display: none; }
 
 .sample-url {
@@ -213,6 +213,9 @@ label.show-password {
   left: 527px;
   position: absolute;
   top: 593px; }
+
+.no-js .paypal {
+  top: 576px; }
 
 #security {
   width: 20%; }
@@ -265,6 +268,9 @@ input[type="url"] {
   z-index: 999; }
 
 input[type="radio"] {
+  box-shadow: none; }
+
+.js input[type="radio"] {
   left: -9999px;
   position: absolute; }
 
@@ -277,10 +283,12 @@ label.cardtype {
   background-color: #f0f3f3;
   background-image: url("../images/sprite.png");
   height: 3em;
-  opacity: 0.5;
   text-indent: -9999px;
   vertical-align: middle;
   width: 4.25em; }
+
+.js label.cardtype {
+  opacity: 0.5; }
 
 #amex-image {
   background-position: 0 -122px; }
@@ -297,14 +305,14 @@ label.cardtype {
 .email {
   margin-bottom: 0.5em; }
 
+#password {
+  z-index: 1; }
+
 #password-reveal {
   position: absolute;
   top: 517px;
   width: 436px;
   z-index: -1; }
-
-#password {
-  z-index: 1; }
 
 .checkbox {
   left: -9999px;
@@ -322,17 +330,49 @@ label.cardtype {
   border-radius: 0.5em 0 0 0.5em;
   position: relative; }
 
-#cardnumber {
-  width: 50%; }
-  #cardnumber:valid {
-    color: green; }
-  #cardnumber:invalid {
-    color: red; }
+#cardnumber:valid {
+  color: green; }
+#cardnumber:invalid {
+  color: red; }
 
-.valid {
+.js #cardnumber {
+  width: 50%; }
+
+.no-js #cardnumber {
+  width: 45%; }
+
+.validation.valid:after, .security-code.valid:after {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  background-image: url("../images/sprite.png");
+  background-position: -31px -499px;
+  background-repeat: no-repeat;
+  content: "Your card is valid";
+  height: 19px;
+  text-indent: -9999px;
+  width: 19px; }
+
+.validation.invalid:after, .security-code.invalid:after {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  background-image: url("../images/sprite.png");
+  background-position: no-repeat;
+  background-position: -2px -499px;
+  content: 'Your card is invalid';
+  height: 19px;
+  text-indent: -9999px;
+  width: 19px; }
+
+input.valid {
   color: green; }
 
-.invalid {
+input.invalid {
   color: red; }
 
 .offPage {
