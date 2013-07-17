@@ -2,7 +2,6 @@ form {
     background-color: white;
     counter-reset: number;
     margin: auto;
-    max-width: 700px;
     padding: 2em;
     position: relative;
     width: 567px;
@@ -37,6 +36,7 @@ form {
                 counter-increment:number;
                 content: counter(number);
                 left: -15px;
+                margin-top: -10px;
                 padding: .25em 0.5em;
                 position: absolute;
             }
@@ -52,6 +52,7 @@ form {
         display: block;
         font-family: $sans-serif;
         font-size: 0.7em;
+        height: 15px;
 
         &.year, &.month {
             left: -9999px;
@@ -71,7 +72,6 @@ form {
 
 button {
     @include linear-gradient(lighten($green, 10), $green);
-    background-color: $green;
     border: 1px solid $green;
     border-radius: 0.25em;
     color: white;
@@ -81,6 +81,15 @@ button {
     margin-left: 33%;
     padding: 0.25em 1em;
     vertical-align: center;
+
+    &:hover {
+        @include linear-gradient($green, darken($green, 10));
+        cursor: pointer;
+    }
+
+    &:active {
+        @include linear-gradient($green, darken($green, 15));
+    }
 }
 
 .disclaimer {
@@ -145,8 +154,9 @@ label.show-password {
 }
 
 .security-image {
-    left: -9999px;
+    margin: 0.4em 0 0 1em;
     position: absolute;
+    text-indent: -9999px;
 }
 
 .security-image.regular {

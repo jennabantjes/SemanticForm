@@ -10,7 +10,7 @@
 // Add dummy text field for password and add toggle link to form
     $('input[type=password]').each(function(){
       var el = $(this), elPH = el.attr("placeholder");
-      el.addClass("offPage").after('<input class="passText" placeholder="' + elPH + '" type="text" />');
+      el.addClass("offPage").after('<input class="passText" id="passText" placeholder="' + elPH + '" type="text" />');
     });
 
     //  keep password field and dummy text field in sync
@@ -109,7 +109,7 @@
       }
   });
 
-/*// Fade image on click
+// Fade image on click
     $('#visa-image').click(function(){
       $(this).fadeTo(100, 1);
       $('#mastercard-image, #amex-image, #discover-image').fadeTo(300, 0.5);
@@ -128,6 +128,6 @@
     $('#discover-image').click(function(){
       $(this).fadeTo(100, 1);
       $('#mastercard-image, #amex-image, #visa-image').fadeTo(300, 0.5);
-    });*/
+    });
 
 })(jQuery);

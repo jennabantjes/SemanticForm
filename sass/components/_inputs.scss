@@ -112,12 +112,13 @@ label.cardtype {
     &:after {
         @include inline-block;
         background-image: url('../images/sprite.png');
-        background-position: -31px -499px;
+        background-position: -30px -504px;
         background-repeat: no-repeat;
         content: "Your card is valid";
-        height: 19px;
+        height: 15px;
         text-indent: -9999px;
-        width: 19px;
+        vertical-align: top;
+        width: 15px;
     }
 }
 
@@ -125,12 +126,13 @@ label.cardtype {
     &:after {
          @include inline-block;
         background-image: url('../images/sprite.png');
-        background-position: no-repeat;
-        background-position: -2px -499px;
+        background-repeat: no-repeat;
+        background-position: -1px -504px;
         content: 'Your card is invalid';
-        height: 19px;
+        height: 15px;
         text-indent: -9999px;
-        width: 19px;
+        vertical-align: top;
+        width: 15px;
     }
 }
 
