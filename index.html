@@ -86,19 +86,20 @@
                         <input class="password"
                                 id="password"
                                 name="password"
+                                placeholder=""
                                 role="input"
                                 type="password"
                                 required />
 
-                        <label for="showpassword" class="show-password">
-                            <input class="checkbox"
-                                    id="checkbox"
-                                    name="checkbox"
-                                    role="checkbox"
-                                    type="checkbox"
-                                    value="value" />
+                        <label for="checkbox" class="show-password">
                             Show Password
                         </label>
+                        <input class="checkbox"
+                                id="checkbox"
+                                name="checkbox"
+                                role="checkbox"
+                                type="checkbox"
+                                value="value" />
                     </fieldset>
 
                 <legend class="title">
@@ -109,7 +110,7 @@
                     </a>
                 </label>
                     <fieldset>
-                        <label for="cardnumber" class="cardnumber-label">
+                        <label for="cardnumber">
                             Card Number
                         </label>
                         <input autocomplete="off"
@@ -162,7 +163,7 @@
                                 required />
                         <label for="security-image" class="security-image regular">Please enter your security code.</label>
 
-                        <legend for="expiration">
+                        <legend for="expiration" class="expiration">
                             Expiration date
                         </legend>
                         <fieldset id="expiration" class="expiration">
@@ -215,7 +216,7 @@
         </section>
 
         <!-- JavaScript includes -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script type="text/javascript" src="javascripts/app.js"></script>
     </body>
 </html>

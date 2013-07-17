@@ -2,13 +2,8 @@ input {
     @include box-shadow(0 1px 2px rgba(0,0,0,0.2) inset, 0 -1px 0 rgba(0,0,0,0.05) inset);
     border: none;
     border-radius: 0.5em;
-    font-family: inherit;
     height: 2.5em;
     margin: 0.5em 0 1.25em 0;
-
-    &[name="password"] {
-        margin-bottom: 0;
-    }
 }
 
 input[type="text"], input[type="email"], input[type="password"] {
@@ -21,7 +16,7 @@ input[type="url"] {
 }
 
 input[type="radio"] {
-    left: 9999px;
+    left: -9999px;
     position: absolute;
 }
 
@@ -68,9 +63,8 @@ label.cardtype {
 }
 
 .checkbox {
-    @include inline-block;
-    height: 1.1em;
-    margin-top: 1em;
+    left: -9999px;
+    position: absolute;
 }
 
 .no-js.checkbox {
@@ -101,4 +95,9 @@ label.cardtype {
 
 .invalid {
     color: red;
+}
+
+.offPage {
+    position: absolute;
+    left: -9999px;
 }

@@ -81,7 +81,7 @@
       }
   });
 
-  // Show/Hide Password
+/*  // Show/Hide Password
   $('#checkbox').click(function(){
     if($('#checkbox').is(':checked'))
     {
@@ -96,10 +96,29 @@
         $("<input type='password' />").attr({name: this.name, value: this.value}).insertBefore(this);
       }).remove();
     }
-  });
+  });*/
 
-  $('#checkbox').click(function(){
+// ----- Setup: Add dummy text field for password and add toggle link to form; "offPage" class moves element off-screen
+    $('input[type=password]').each(function(){
+      var el = $(this), elPH = el.attr("placeholder");
+      el.addClass("offPage").after('<input class="passText" placeholder="' + elPH + '" type="text" />');
+    });
 
-  });
+    // ----- keep password field and dummy text field in sync
+    $('input[type=password]').keyup(function(){
+      var elText = $(this).val();
+      $('.passText').val(elText);
+    });
+    $('.passText').keyup(function(){
+      var elText = $(this).val();
+      $('input[type=password]').val(elText);
+    });
+
+    // ----- Toggle link functionality - turn on/off "offPage" class on fields
+    $('#checkbox').click(function(e){
+      $('.show-password').toggleClass('unchecked');
+      $('input[type=password], .passText').toggleClass("offPage");
+      e.preventDefault(); // <-- prevent any default actions
+    });
 
 })(jQuery);
